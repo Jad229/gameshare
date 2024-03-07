@@ -2,8 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+Background Grey - #161616
+#202020
+#3b3b3b 
+#373737
+#252525
+*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background: #161616;
+  color: white;
 }
