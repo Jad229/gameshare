@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaSearch } from "react-icons/fa";
 
 export default function Navbar() {
   return (
@@ -11,11 +12,12 @@ export default function Navbar() {
       </div>
 
       {/* search bar */}
-      <div>
+      <div className="flex items-center gap-5">
+        <FaSearch size={20} className="text-gray-400" />
         <input
           type="text"
-          placeholder="Search"
-          className="rounded-full p-2 bg-zinc-800 shadow-md w-80 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50 transition duration-300 ease-in-out"
+          placeholder="Search Games"
+          className="rounded-full p-3 bg-zinc-800 shadow-md w-80 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50 transition duration-300 ease-in-out"
         />
       </div>
 
