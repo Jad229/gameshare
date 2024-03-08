@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center p-4">
+    <nav className="flex justify-between items-center py-4">
       {/* brand */}
       <div>
         <Link href={"/"} className="text-2xl tracking-widest font-bold">
