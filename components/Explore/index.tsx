@@ -1,24 +1,12 @@
 import React from "react";
 import { GameCard } from "..";
 import { IGame, IGameList } from "@/types";
+import { fetchGameList } from "@/app/(actions)";
 
 let page = 1;
 
 export default async function Explore() {
-  const games = await getGameList(page);
-
-  async function getGameList(page: number): Promise<IGameList> {
-    const response = await fetch(
-      `https://api.rawg.io/api/games?key=${process.env.RAWG_API_KEY}&page=${page}&page_size=5`
-    );
-
-    if (response.ok) {
-      const data = response.json();
-      return data;
-    }
-
-    throw new Error("Failed to fetch games");
-  }
+  const games = await fetchGameList(page);
 
   return (
     <section className="flex flex-col justify-center items-center gap-10 pt-10">
