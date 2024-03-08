@@ -22,7 +22,7 @@ export default async function Home() {
       {/* explore section */}
       <section>
         <h1 className="text-5xl font-bold text-sky-500">Explore</h1>
-        <div className="flex flex-wrap justify-center items-center gap-4 overflow-scroll p-4">
+        <div className="flex flex-wrap justify-center items-center gap-10 overflow-scroll p-4">
           {games.results.map((game: IGame) => (
             <GameCard key={game.id} game={game} />
           ))}

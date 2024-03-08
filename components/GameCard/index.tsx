@@ -9,7 +9,7 @@ type props = {
 
 export default function GameCard({ game }: props) {
   return (
-    <div className="flex flex-col items-center justify-center w-80 gap-3 bg-zinc-700 rounded-lg shadow-xl">
+    <div className="flex flex-col items-center justify-center w-80 gap-3 bg-zinc-700 rounded-lg shadow-xl cursor-pointer hover:scale-110">
       <div className="w-full h-40 overflow-hidden relative">
         <Image
           src={game.background_image}
