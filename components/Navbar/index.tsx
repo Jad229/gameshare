@@ -7,7 +7,10 @@ export default function Navbar() {
       {/* brand */}
       <div>
         <Link href={"/"} className="text-2xl tracking-widest font-bold">
-          Game<span className="text-sky-500">Share</span>
+          Game
+          <span className="text-transparent bg-gradient-to-r from-sky-400 via-violet-500 to-fuchsia-500 bg-clip-text inline-block">
+            Share
+          </span>
         </Link>
       </div>
 
