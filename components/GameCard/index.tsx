@@ -12,7 +12,7 @@ export default function GameCard({ game }: props) {
     <div className="flex flex-col items-center justify-center w-80 gap-3 bg-zinc-700 rounded-lg shadow-xl">
       <div className="w-full h-40 overflow-hidden relative">
         <Image
-          src="https://via.placeholder.com/200"
+          src={game.background_image}
           alt="game cover"
           className="min-h-full object-cover rounded-md"
           width={500}
@@ -20,7 +20,7 @@ export default function GameCard({ game }: props) {
         />
       </div>
       <div className="p-4">
-        <h2 className="text-xl font-bold">Game Title</h2>
+        <h2 className="text-xl font-bold">{game.name}</h2>
       </div>
       <div className="p-4 w-full flex justify-between items-center ">
         <button className="bg-violet-500 py-2 px-4 rounded-lg transition-all hover:scale-105 shadow-xl ">
