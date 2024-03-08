@@ -1,11 +1,13 @@
 import React from "react";
-import { GameCard } from "..";
-import { IGame, IGameList } from "@/types";
+import { GameCard, Pagination } from "..";
+import { IGame } from "@/types";
 import { fetchGameList } from "@/app/(actions)";
 
-let page = 1;
+type props = {
+  page: number;
+};
 
-export default async function Explore() {
+export default async function Explore({ page }: props) {
   const games = await fetchGameList(page);
 
   return (
@@ -18,6 +20,8 @@ export default async function Explore() {
           <GameCard key={game.id} game={game} />
         ))}
       </div>
+
+      <Pagination />
     </section>
   );
 }

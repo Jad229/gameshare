@@ -1,6 +1,7 @@
 "use server";
 
 import { IGameList } from "@/types";
+import { revalidatePath } from "next/cache";
 
 async function fetchGameList(page: number): Promise<IGameList> {
   const response = await fetch(
@@ -9,6 +10,7 @@ async function fetchGameList(page: number): Promise<IGameList> {
 
   if (response.ok) {
     const data = response.json();
+    revalidatePath("/");
     return data;
   }
 
