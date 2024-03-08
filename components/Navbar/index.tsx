@@ -1,5 +1,8 @@
 import Link from "next/link";
+import { CgProfile } from "react-icons/cg";
 import { FaSearch } from "react-icons/fa";
+
+import { PiBooksDuotone } from "react-icons/pi";
 
 export default function Navbar() {
   return (
@@ -27,10 +30,14 @@ export default function Navbar() {
       {/* navigation */}
       <ul className="flex justify-between gap-5 items-center">
         <li>
-          <Link href={"/profile"}>Profile</Link>
+          <Link href={"/profile"} className="flex gap-1 items-center">
+            <CgProfile size={25} /> Profile
+          </Link>
         </li>
         <li>
-          <Link href={"/library"}>My Library</Link>
+          <Link href={"/library"} className="flex gap-1 items-center">
+            <PiBooksDuotone size={25} /> My Library
+          </Link>
         </li>
       </ul>
     </nav>

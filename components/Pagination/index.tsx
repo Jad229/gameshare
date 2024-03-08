@@ -10,23 +10,23 @@ export default function Pagination() {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
-  const params = new URLSearchParams(searchParams);
   const [page, setPage] = useState(1);
+  replace(createPageURL(page));
+
+  function createPageURL(page: number) {
+    const params = new URLSearchParams(searchParams);
+    params.set("page", page.toString());
+    return `${pathname}?${params.toString()}`;
+  }
 
   function pageUp() {
     setPage((prevState) => prevState + 1);
-
-    params.set("page", page.toString());
-    replace(`${pathname}?${params.toString()}`);
   }
 
   function pageDown() {
     //prevents negative page numbers
-    if (page < 1) setPage(1);
+    if (page <= 1) setPage(1);
     else setPage((prevState) => prevState - 1);
-
-    params.set("page", page.toString());
-    replace(`${pathname}?${params.toString()}`);
   }
 
   return (
