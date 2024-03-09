@@ -1,7 +1,9 @@
+"use client";
 import { IGame } from "@/types";
 import Image from "next/image";
 import React from "react";
 import { FaPlus } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 type props = {
   game: IGame;
@@ -9,7 +11,11 @@ type props = {
 
 export default function GameCard({ game }: props) {
   return (
-    <div className="flex flex-col items-center justify-center w-80 gap-3 bg-zinc-700 rounded-lg shadow-xl cursor-pointer hover:scale-110">
+    <motion.div
+      whileHover={{ scale: 1.15 }}
+      transition={{ type: "spring", duration: 0.5 }}
+      className="flex flex-col items-center justify-center w-80 gap-3 bg-zinc-700 rounded-lg shadow-xl cursor-pointer "
+    >
       <div className="w-full h-40 overflow-hidden relative">
         <Image
           src={game.background_image}
@@ -30,6 +36,6 @@ export default function GameCard({ game }: props) {
           <FaPlus />
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
