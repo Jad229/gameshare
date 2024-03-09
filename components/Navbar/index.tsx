@@ -6,7 +6,7 @@ import { PiBooksDuotone } from "react-icons/pi";
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center py-4">
+    <nav className="flex justify-between items-center py-4 px-12">
       {/* brand */}
       <div>
         <Link href={"/"} className="text-2xl tracking-widest font-bold">
