@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`px-6 ${inter.className}`}>
+      <body className={`px-6 h-screen overflow-scroll ${inter.className}`}>
         <Navbar />
         {children}
         <Footer />

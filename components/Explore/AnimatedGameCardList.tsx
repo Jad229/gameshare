@@ -3,6 +3,7 @@ import React from "react";
 import { GameCard } from "..";
 import { IGame, IGameList } from "@/types";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 type props = {
   games: IGameList;
@@ -35,7 +36,9 @@ export default function AnimatedGameCardList({ games }: props) {
         >
           {games.results.map((game: IGame) => (
             <motion.div variants={gameCardWrapper} key={game.id}>
-              <GameCard game={game} />
+              <Link href={`/games/${game.id}`}>
+                <GameCard game={game} />
+              </Link>
             </motion.div>
           ))}
         </motion.div>
