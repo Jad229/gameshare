@@ -32,7 +32,7 @@ export default function AnimatedGameCardList({ games }: props) {
           initial="hidden"
           variants={gameCardList}
           animate="visible"
-          className="flex flex-wrap justify-center items-center gap-10 overflow-scroll p-4"
+          className="flex flex-wrap justify-center items-center gap-10 overflow-hidden p-12"
         >
           {games.results.map((game: IGame) => (
             <motion.div variants={gameCardWrapper} key={game.id}>

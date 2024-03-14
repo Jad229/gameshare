@@ -15,7 +15,7 @@ export default async function Explore({ page }: props) {
       <h1 className="text-5xl font-bold text-transparent bg-gradient-to-r from-sky-400 via-violet-500 to-fuchsia-500 bg-clip-text inline-block">
         Explore
       </h1>
-      <div className="flex gap-5">
+      <div className="flex gap-5 p-2">
         <PaginationArrow direction="left" />
         <AnimatedGameCardList games={games} />
         <PaginationArrow direction="right" />

@@ -13,7 +13,7 @@ export default async function GamePage({ params }: props) {
 
   const game: IGame = await fetchGame(id);
   return (
-    <section className="flex flex-col md:flex-row justify-center items-center gap-10 h-[85vh] my-3">
+    <main className="flex flex-col md:flex-row justify-center items-center gap-10 h-[85vh] my-3">
       <div
         className="relative flex h-full w-full items-center overflow-hidden rounded-2xl bg-cover bg-center"
         style={{
@@ -29,6 +29,6 @@ export default async function GamePage({ params }: props) {
           Add To Library
         </button>
       </div>
-    </section>
+    </main>
   );
 }
