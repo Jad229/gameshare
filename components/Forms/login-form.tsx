@@ -3,7 +3,7 @@ import { MdEmail } from "react-icons/md";
 
 export default function LoginForm() {
   return (
-    <form className="border-2 border-sky-900 flex flex-col justify-center items-center gap-20 h-[500px] w-[400px] bg-zinc-900 rounded-xl m-auto shadow-2xl p-12">
+    <form className="border-2 border-sky-900 flex flex-col justify-center items-center gap-16 h-[500px] w-[400px] bg-zinc-900 rounded-xl m-auto shadow-2xl px-12 py-5">
       <div className="w-full flex items-center justify-center gap-5">
         <h1 className="text-4xl font-bold shadow-xl">Please Sign In </h1>
       </div>

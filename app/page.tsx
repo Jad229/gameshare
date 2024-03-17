@@ -11,7 +11,7 @@ export default function Page() {
       </h1>
       <p className="text-5xl font-extralight">Find Your Next Obsession.</p>
       <Link
-        href="/login"
+        href="/dashboard"
         className="p-4 bg-fuchsia-500 rounded-xl shadow-xl text-black font-bold text-xl hover:bg-violet-600 transition duration-300 ease-in-out transform hover:scale-110 hover:shadow-2xl"
       >
         Press Start
